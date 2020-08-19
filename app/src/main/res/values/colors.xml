@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="darkest_grey">#202020</color>
+    <color name="dark_grey">#474747</color>
+    <color name="cherry_red">#E8175D</color>
+    <color name="faded_cherry_red">#CC527A</color>
+    <color name="light_grey">#A8A7A7</color>
+    <color name="brown_grey">#594F4F</color>
+    <color name="brick_red">#EC2049</color>
+    <color name="pink">#A7226E</color>
+</resources>

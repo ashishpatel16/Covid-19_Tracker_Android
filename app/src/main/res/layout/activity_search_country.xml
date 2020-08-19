@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchCountry"
+    android:background="@drawable/android_mobile__1">
+
+    <EditText
+        android:id="@+id/searchCountryEditText"
+        android:layout_width="258dp"
+        android:layout_height="58dp"
+        android:background="@drawable/rectangle_1"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:padding="8dp"
+        android:hint="Enter Country"
+        android:inputType="text|textNoSuggestions"
+        android:textColor="#090909"
+        android:textColorHint="#040404"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.106" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="97dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="39dp"
+        android:background="@drawable/curved_button"
+        android:fontFamily="sans-serif-thin"
+        android:onClick="onButtonClick"
+        android:shadowColor="#ffff"
+        android:textSize="22sp"
+        android:text="Search"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchCountryEditText"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
