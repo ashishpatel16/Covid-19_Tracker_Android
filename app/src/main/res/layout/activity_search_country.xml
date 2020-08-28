@@ -33,7 +33,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="39dp"
         android:background="@drawable/curved_button"
-        android:fontFamily="sans-serif-thin"
+        android:fontFamily="@font/caviardreams"
         android:onClick="stateStats"
         android:shadowColor="#ffff"
         android:text="Search"
@@ -47,17 +47,35 @@
 
     <TextView
         android:id="@+id/stateTextView"
-        android:layout_width="278dp"
-        android:layout_height="318dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/caviardreams"
         android:gravity="center"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.365" />
+        app:layout_constraintVertical_bias="0.184" />
+
+    <Button
+        android:id="@+id/allIndiaStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:background="@drawable/curved_button"
+        android:fontFamily="@font/caviardreams"
+        android:onClick="goToAllIndiaStats"
+        android:text=" Get stats for all states "
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stateTextView"
+        app:layout_constraintVertical_bias="0.075" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
