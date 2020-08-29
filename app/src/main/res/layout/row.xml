@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/confirmedTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="168dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/caviardreams"
+            android:gravity="center_horizontal"
+            android:text="10000000"
+            android:textColor="#becbff"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/moreConfirmedTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/caviardreams"
+            android:text="+10"
+            android:textColor="#becbff"
+            android:textSize="8dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/confirmedTv"
+            app:layout_constraintTop_toBottomOf="@+id/confirmedTv" />
+
+        <TextView
+            android:id="@+id/decreasedTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="6dp"
+            android:fontFamily="@font/caviardreams"
+            android:gravity="center_horizontal"
+            android:text="100000"
+            android:textColor="#fff"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/moreDecreasedTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/caviardreams"
+            android:text="+10"
+            android:textColor="#fff"
+            android:textSize="8dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/decreasedTv"
+            app:layout_constraintTop_toBottomOf="@+id/decreasedTv" />
+
+        <TextView
+            android:id="@+id/recoveredTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="64dp"
+            android:fontFamily="@font/caviardreams"
+            android:gravity="center_horizontal"
+            android:text="3000000"
+            android:textColor="#79d70f"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/moreRecoveredTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/caviardreams"
+            android:text="+10"
+            android:textColor="#79d70f"
+            android:textSize="8dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/recoveredTv"
+            app:layout_constraintTop_toBottomOf="@+id/recoveredTv" />
+
+        <TextView
+            android:id="@+id/activeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/caviardreams"
+            android:gravity="center_horizontal"
+            android:text="activeTv"
+            android:textColor="#ea5455"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/stateName"
+            android:layout_width="91dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/caviardreams"
+            android:text="Jammu and Kashmir"
+            android:textColor="#f9bf8f"
+            android:textSize="14dp"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.571" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

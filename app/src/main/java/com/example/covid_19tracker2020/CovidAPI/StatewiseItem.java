@@ -2,7 +2,9 @@ package com.example.covid_19tracker2020.CovidAPI;
 
 import com.google.gson.annotations.SerializedName;
 
-public class StatewiseItem{
+import java.io.Serializable;
+
+public class StatewiseItem implements Serializable {
 
 	@SerializedName("statenotes")
 	private String statenotes;

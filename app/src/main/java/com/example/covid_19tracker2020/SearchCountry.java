@@ -1,6 +1,7 @@
 package com.example.covid_19tracker2020;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,11 +13,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.example.covid_19tracker2020.CovidAPI.APIClient;
 import com.example.covid_19tracker2020.CovidAPI.CasesTimeSeriesItem;
 import com.example.covid_19tracker2020.CovidAPI.Response;
 import com.example.covid_19tracker2020.CovidAPI.StatewiseItem;
 
+import java.io.Serializable;
 import java.util.List;
 
 import retrofit2.Call;
@@ -32,6 +35,8 @@ public class SearchCountry extends AppCompatActivity {
     private List<StatewiseItem> stateWise;
     private TextView stateInfo;
     private Intent allStateStats;
+    LottieAnimationView loadingAnimation;
+    ConstraintLayout layout;
 
 
     @Override
@@ -42,6 +47,13 @@ public class SearchCountry extends AppCompatActivity {
 
         country = findViewById(R.id.searchCountryEditText);
         stateInfo = findViewById(R.id.stateTextView);
+        loadingAnimation = findViewById(R.id.loadingAnim);
+        layout = findViewById(R.id.myLayout);
+
+
+        loadingAnimation.setVisibility(View.VISIBLE);
+        loadingAnimation.playAnimation();
+        layout.setAlpha(0);
 
         // Deploying retrofit to fetch data for us.
         Retrofit retrofit = new Retrofit.Builder().baseUrl(baseURL)
@@ -70,6 +82,10 @@ public class SearchCountry extends AppCompatActivity {
                         Log.i("ashish","Dated "+obj.getDate()+" Confirmed: "+obj.getDailyconfirmed()
                                 +" recovered: "+obj.getDailyrecovered()+" decreased: "+obj.getDailydeceased());
                     }
+                    Toast.makeText(SearchCountry.this, "Done!", Toast.LENGTH_SHORT).show();
+                    loadingAnimation.pauseAnimation();
+                    loadingAnimation.setVisibility(View.INVISIBLE);
+                    layout.setAlpha(1);
                 }
             }
 
@@ -115,6 +131,7 @@ public class SearchCountry extends AppCompatActivity {
 
     public void goToAllIndiaStats(View view) {
         allStateStats = new Intent(this,All_India_Stats.class);
+        allStateStats.putExtra("STATE_LIST",(Serializable)stateWise);
         startActivity(allStateStats);
     }
 }
