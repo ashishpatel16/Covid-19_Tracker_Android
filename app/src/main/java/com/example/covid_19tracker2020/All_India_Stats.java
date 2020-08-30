@@ -25,13 +25,10 @@ public class All_India_Stats extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all__india__stats);
-        Toast.makeText(this, "Hola!", Toast.LENGTH_SHORT).show();
 
         extras = getIntent().getExtras();
 
         stateWise = (List<StatewiseItem>) extras.getSerializable("STATE_LIST");
-
-        for(StatewiseItem st : stateWise) Log.i("ash",st.getState());
 
         recyclerView = findViewById(R.id.recyclerView);
         MyAdapter adapter = new MyAdapter(this,stateWise);

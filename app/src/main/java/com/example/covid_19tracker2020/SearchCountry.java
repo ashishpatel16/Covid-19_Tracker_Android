@@ -36,7 +36,6 @@ public class SearchCountry extends AppCompatActivity {
     private TextView stateInfo;
     private Intent allStateStats;
     LottieAnimationView loadingAnimation;
-    ConstraintLayout layout;
 
 
     @Override
@@ -48,12 +47,9 @@ public class SearchCountry extends AppCompatActivity {
         country = findViewById(R.id.searchCountryEditText);
         stateInfo = findViewById(R.id.stateTextView);
         loadingAnimation = findViewById(R.id.loadingAnim);
-        layout = findViewById(R.id.myLayout);
-
 
         loadingAnimation.setVisibility(View.VISIBLE);
         loadingAnimation.playAnimation();
-        layout.setAlpha(0);
 
         // Deploying retrofit to fetch data for us.
         Retrofit retrofit = new Retrofit.Builder().baseUrl(baseURL)
@@ -78,14 +74,8 @@ public class SearchCountry extends AppCompatActivity {
                     timeWise = response.body().getCasesTimeSeries();
                     stateWise = response.body().getStatewise();
 
-                    for(CasesTimeSeriesItem obj : timeWise) {
-                        Log.i("ashish","Dated "+obj.getDate()+" Confirmed: "+obj.getDailyconfirmed()
-                                +" recovered: "+obj.getDailyrecovered()+" decreased: "+obj.getDailydeceased());
-                    }
-                    Toast.makeText(SearchCountry.this, "Done!", Toast.LENGTH_SHORT).show();
                     loadingAnimation.pauseAnimation();
                     loadingAnimation.setVisibility(View.INVISIBLE);
-                    layout.setAlpha(1);
                 }
             }
 
@@ -130,8 +120,10 @@ public class SearchCountry extends AppCompatActivity {
     }
 
     public void goToAllIndiaStats(View view) {
+
         allStateStats = new Intent(this,All_India_Stats.class);
         allStateStats.putExtra("STATE_LIST",(Serializable)stateWise);
+
         startActivity(allStateStats);
     }
 }
