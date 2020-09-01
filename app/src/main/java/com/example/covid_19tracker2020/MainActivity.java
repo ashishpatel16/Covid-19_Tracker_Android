@@ -54,8 +54,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startActivity(){
-        allStateStats = new Intent(this, All_India_Stats.class);
-        allStateStats.putExtra("STATE_LIST", (Serializable) stateWise);
 
         anim.pauseAnimation();
         anim.setVisibility(View.INVISIBLE);
@@ -91,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
                     stateWise = response.body().getStatewise();
 
                     Log.i("test", "Success " + response.code());
+                    allStateStats = new Intent(MainActivity.this, All_India_Stats.class);
+                    allStateStats.putExtra("STATE_LIST", (Serializable) stateWise);
                     startActivity();
                 }
             }
