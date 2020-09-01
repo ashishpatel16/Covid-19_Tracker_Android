@@ -62,16 +62,17 @@
 
 
     <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="280dp"
-        android:layout_height="280dp"
+        android:id="@+id/loadingAnim"
+        android:layout_width="201dp"
+        android:layout_height="188dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:lottie_autoPlay="true"
         app:layout_constraintTop_toBottomOf="@+id/allIndiaStats"
+        app:layout_constraintVertical_bias="0.115"
+        app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        android:visibility="invisible"
-        android:id="@+id/loadingAnim"
         app:lottie_rawRes="@raw/loadcircle" />
 
     <Button

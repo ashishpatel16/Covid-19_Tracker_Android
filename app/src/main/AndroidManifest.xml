@@ -11,8 +11,8 @@
         android:roundIcon="@mipmap/logo_launch_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".All_India_Stats"></activity>
-        <activity android:name=".SearchCountry" />
+        <activity android:name=".State_Info"></activity>
+        <activity android:name=".All_India_Stats" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
