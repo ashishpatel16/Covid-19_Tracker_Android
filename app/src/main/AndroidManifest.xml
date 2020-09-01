@@ -11,9 +11,9 @@
         android:roundIcon="@mipmap/logo_launch_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".State_Info"></activity>
-        <activity android:name=".All_India_Stats" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".State_Info" android:screenOrientation="portrait"></activity>
+        <activity android:name=".All_India_Stats" android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

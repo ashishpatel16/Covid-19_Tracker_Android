@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     public void goToStats(View view) {
 
         anim.setVisibility(View.VISIBLE);
@@ -60,8 +59,6 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(allStateStats);
     }
-
-
 
     public void fetchData() {
 

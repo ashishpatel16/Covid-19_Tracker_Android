@@ -31,7 +31,6 @@ public class All_India_Stats extends AppCompatActivity {
     private final String baseURL = "https://api.covid19india.org/";
     RecyclerView recyclerView;
     Bundle extras;
-    LottieAnimationView anim2;
     SwipeRefreshLayout refresh;
 
     @Override
@@ -80,6 +79,7 @@ public class All_India_Stats extends AppCompatActivity {
 
                     stateWise = response.body().getStatewise();
                     Log.i("test", "Success " + response.code());
+                    for(int i=0;i<stateWise.size();i++) Log.i("ashish",i+" : "+stateWise.get(i).getState());
                     setAdapter();
 
                 }
