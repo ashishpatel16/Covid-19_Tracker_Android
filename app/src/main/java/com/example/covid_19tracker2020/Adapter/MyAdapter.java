@@ -2,6 +2,7 @@ package com.example.covid_19tracker2020.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,7 +41,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
 
-        if(!list.get(position).getState().equalsIgnoreCase("State Unassigned")) {
+
+        if(position != 36) {
             holder.state.setText(list.get(position).getState());
 
             holder.rec.setText(list.get(position).getRecovered());
@@ -53,19 +55,17 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
             holder.conf.setText(list.get(position).getConfirmed());
             holder.moreConf.setText("+" + list.get(position).getDeltaconfirmed());
+            holder.mainLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent stateInfoActivity = new Intent(context, State_Info.class);
+                    stateInfoActivity.putExtra("State_List", (Serializable) list);
+                    stateInfoActivity.putExtra("State_Index",position);
+                    context.startActivity(stateInfoActivity);
+                }
+            });
         }
-
-        holder.mainLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent stateInfoActivity = new Intent(context, State_Info.class);
-                stateInfoActivity.putExtra("State_List", (Serializable) list);
-                stateInfoActivity.putExtra("State_Index",position);
-                context.startActivity(stateInfoActivity);
-            }
-        });
-
     }
 
     @Override

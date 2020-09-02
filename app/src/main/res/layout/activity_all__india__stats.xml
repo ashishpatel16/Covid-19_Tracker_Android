@@ -26,7 +26,7 @@
                 android:id="@+id/tv1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="160dp"
+                android:layout_marginStart="170dp"
                 android:fontFamily="@font/buttonfont"
                 android:gravity="center_horizontal"
                 android:text="Confirmed"
@@ -35,13 +35,14 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.478" />
 
             <TextView
                 android:id="@+id/tv2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="12dp"
                 android:fontFamily="@font/buttonfont"
                 android:gravity="center_horizontal"
                 android:text="Deaths"
@@ -57,7 +58,7 @@
                 android:id="@+id/tv3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="68dp"
+                android:layout_marginEnd="67dp"
                 android:fontFamily="@font/buttonfont"
                 android:gravity="center_horizontal"
                 android:text="Recovered"
@@ -72,7 +73,7 @@
                 android:id="@+id/tv4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="112dp"
+                android:layout_marginStart="108dp"
                 android:fontFamily="@font/buttonfont"
                 android:gravity="center_horizontal"
                 android:text="Active"
@@ -85,9 +86,9 @@
 
             <TextView
                 android:id="@+id/tv5"
-                android:layout_width="91dp"
+                android:layout_width="65dp"
                 android:layout_height="36dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="4dp"
                 android:fontFamily="@font/buttonfont"
                 android:gravity="center"
                 android:text="State / UT"
@@ -97,7 +98,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.571" />
+                app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
@@ -106,18 +107,18 @@
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeToRefresh"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cView"
-        app:layout_constraintVertical_bias="0.45">
+        app:layout_constraintTop_toBottomOf="@+id/cView">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
