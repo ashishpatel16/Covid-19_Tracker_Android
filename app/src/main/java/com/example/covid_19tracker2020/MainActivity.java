@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Response> call, Throwable t) {
-                Log.i("test", "Something went Wrong");
+                Log.i("test", "Something went Wrong "+t);
             }
         });
     }
